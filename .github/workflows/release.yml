@@ -76,11 +76,11 @@ jobs:
           printf 'Implantando %s no commit %s\n' "$tag" "$commit"
 
           # Constrói as imagens e inicia o backend antes do Nginx.
-          sudo -n docker compose config --quiet
-          sudo -n docker compose build
-          sudo -n docker compose up -d --no-build --wait --wait-timeout 60 backend
-          sudo -n docker compose up -d --no-build --force-recreate --wait --wait-timeout 60 frontend
-          sudo -n docker compose ps
+          docker compose config --quiet
+          docker compose build
+          docker compose up -d --no-build --wait --wait-timeout 60 backend
+          docker compose up -d --no-build --force-recreate --wait --wait-timeout 60 frontend
+          docker compose ps
 
           # Confirma que a API responde pela porta HTTP do Nginx.
           resposta=$(curl -fsS --max-time 5 --retry 5 --retry-delay 2 \
