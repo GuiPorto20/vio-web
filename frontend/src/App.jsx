@@ -59,6 +59,9 @@ function App() {
       <header className="cabecalho">
         <h1>VIO WEB</h1>
         <p>Venda de Ingressos Online</p>
+        <p className="identificacao">
+          Guilherme Porto de Melo Junqueira · DSM 4
+        </p>
       </header>
 
       <main className="conteudo">

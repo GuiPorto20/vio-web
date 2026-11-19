@@ -27,6 +27,12 @@ body {
     margin-bottom: 0;
 }
 
+.cabecalho .identificacao {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
 .conteudo {
     display: flex;
     justify-content: center;
